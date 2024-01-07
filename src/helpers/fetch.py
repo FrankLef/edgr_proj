@@ -13,24 +13,7 @@ def fetch_rss(
     period: datetime = datetime.now(),
     head: bool = False,
     overwrite: bool = False,
-):
-    """[summary]
-
-    Args:
-        url (str): URL with data files.
-        path (Path, optional): Location where data file will be downloaded. Defaults to Path.cwd().
-        period (datetime, optional): Date with the year and month used to name the file.. Defaults to datetime.now().
-        head (bool, optional): True=Do a http HEAD request method. Defaults to False.
-        overwrite (bool, optional): True=Overwrite existing file. Defaults to False.
-
-    Raises:
-        FileNotFoundError: The path to the download file does not exists. Must be created.
-        FileExistsError: The fie exists and will not be overwritten. Change overwrite=True to override this.
-
-    Returns:
-        [type]: [description]
-    """
-
+) -> int:
     # create the file name and add it to the path
     if path.exists():
         fn = write.write_fn(period=period)
@@ -47,7 +30,6 @@ def fetch_rss(
         raise FileExistsError(msg)
 
     # add filename to the url
-    # url_fn = write.write_url(url=url, fn=fn)
     url_fn = parse.urljoin(url, fn)
 
     # make the request
