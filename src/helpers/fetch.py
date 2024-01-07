@@ -3,7 +3,8 @@ from pathlib import Path
 from urllib import parse as parse
 
 import requests
-import write
+
+import src.helpers.write as write
 
 
 def fetch_rss(

@@ -5,10 +5,6 @@ from urllib import parse as parse
 import pytest
 
 from config import settings
-
-# from src.edgaretl import registry
-# from src.edgaretl.xbrlrss import write
-# from src.edgaretl.xbrlrss import fetch
 from src.helpers import fetch, write
 
 
@@ -45,9 +41,7 @@ def specs(dir_2020, month_url):
     a_dir = Path(dir_2020)
     fn = write.write_fn(period=per)
     path = a_dir.joinpath(fn)
-    # url = month_url
-    # url_fn = url + r"/" + fn
-    url_fn = parse.joinurl(month_url, fn)
+    url_fn = parse.urljoin(month_url, fn)
     specs = {
         "period": per,
         "dir": a_dir,
