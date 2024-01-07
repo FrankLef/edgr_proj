@@ -1,9 +1,19 @@
+# prefix used with rss download of xbrl files
+file_prefix = 'xbrlrss'
 
+[url]
+# The public example provided by IANA
+example = 'http://example.com'
+# A simple HTTP request and response service by Kenneth Reitz
+simple = 'https://httpbin.org'
+# EDGAR archives url
+edgar = 'https://www.sec.gov/Archives/edgar'
+# EDGAR monthly url
+edgar_month = 'https://www.sec.gov/Archives/edgar/monthly'
+# this is the old edgar monthly url.  It has http instead of https
+# it can be used, for example, to test the http code 301
+edgar_month_old = 'http://www.sec.gov/Archives/edgar/monthly'
 
-[message]
-main = "Processing the main flow."
-
-# ms access database specs
-[msaccess]
-path = "C:/Users/Public/MyJob/DesjCap_cies/PHT/db_PHT_V1_xprt.accdb"
-tables = ["tbl_xprt_sales_grp", "tbl_xprt_part"]
+[file]
+rss202001 = 'xbrlrss-2020-01.xml'
+rss202101 = 'xbrlrss-2021-01.xml'
