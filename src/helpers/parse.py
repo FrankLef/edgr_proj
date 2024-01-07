@@ -31,7 +31,6 @@ def parse_rss(file: str, ndx: int = -1, prefix: str = "item") -> dict:
         entry = fpd.entries[ndx]
         item = parse_rss_entry(entry=entry)
         data[prefix + str(ndx).zfill(z)] = item
-
     return data
 
 
@@ -46,7 +45,6 @@ def parse_rss_channel(fpd: feedparser.util.FeedParserDict) -> dict:
         "pubDate": published_dt,
         "items_nb": len(fpd.entries),
     }
-
     return data
 
 
@@ -72,5 +70,4 @@ def parse_rss_entry(entry: dict) -> dict:
     # update data dict with enclosure data
     data["enclosure_len"] = enclosure_len
     data["enclosure_url"] = enclosure_url
-
     return data
