@@ -5,6 +5,11 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
+## Deprecated project
+
+> This project is deprecated. The rss feed returned by the SEC give a
+status code 403 which means all is good. But eh files are empty.
+
 ## Introduction
 
 The template is based on avideo by [Alexander Falk](https://www.youtube.com/watch?v=2Oe9ZqXVGME)
