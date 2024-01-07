@@ -4,9 +4,6 @@ from pathlib import Path
 
 from rich.logging import RichHandler
 
-# from urllib import parse as parse
-
-
 logging.basicConfig(
     level=logging.DEBUG,
     format="%(message)s",
@@ -25,9 +22,6 @@ if a_path not in sys.path:
 from config import settings  # noqa
 
 a_url = settings.url.simple
-
-# x = parse.urljoin(a_url, "file_name")
-# print(f"{x=}")
 
 
 def main(text: str, n: int) -> bool:
